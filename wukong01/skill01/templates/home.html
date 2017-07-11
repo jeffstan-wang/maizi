@@ -7,6 +7,12 @@
 <body>
 <p>welcome to django lesson 进阶课程</p>
 {% load poll_extras %}
-{% dateAllen "%Y-%m-%d %I:%M %p" %}
+{% get_current_time "%Y-%m-%d %I:%M %p" as my_time%}
+<p>it is {{ my_time }}</p>
+<p>it is {{ my_time }}</p>
+
+<p>it is {{ my_time }}</p>
+<p>it is {{ my_time }}</p>
+
 </body>
 </html>
