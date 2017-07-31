@@ -1,18 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>django lesson</title>
-</head>
-<body>
-<p>welcome to django lesson 进阶课程</p>
-{% load poll_extras %}
-{% get_current_time "%Y-%m-%d %I:%M %p" as my_time%}
-<p>it is {{ my_time }}</p>
-<p>it is {{ my_time }}</p>
+<html>
+<head><title>Ordering notice</title></head>
 
-<p>it is {{ my_time }}</p>
-<p>it is {{ my_time }}</p>
+<body>
+
+<h1>Ordering notice</h1>
+
+<p>Dear {{ person_name }},</p>
+
+<p>Thanks for placing an order from {{ company }}. It's scheduled to
+ship on {{ ship_date|date:"F j, Y" }}.</p>
+
+<p>Here are the items you've ordered:</p>
+
+<ul>
+{% for item in item_list %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+{% if ordered_warranty %}
+    <p>Your warranty information will be included in the packaging.</p>
+{% else %}
+    <p>You didn't order a warranty, so you're on your own when
+    the products inevitably stop working.</p>
+{% endif %}
+
+<p>Sincerely,<br />{{ company }}</p>
 
 </body>
 </html>
