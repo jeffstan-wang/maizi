@@ -1,18 +1,28 @@
-import getpass
-# user=input('Please input your name here:')
-# password=getpass.getpass("Input your password:")
-# print(user,password)
-real_age=40
-count=1
-while count <= 3:
-    age=int(input('Please input the age:'))
-    if age > real_age:
-        print('thinking small')
-    elif age < real_age:
-        print('thinking biggre')
-    else:
-        print('right answer!')
-        break
-    count+=1
-else:
-    print("you have no change to guess the age!")
+# lineNum=1
+# start='*'
+# while lineNum <=6:
+#     print(start*lineNum)
+#     lineNum=lineNum+1
+
+# i=1
+# while i<=9:
+#     j=1
+#     while j<=i:
+#         print("%d*%d=%d" % (j,i,i*j),end="\t")
+#         j=j+1
+#     print(" ")
+#     i=i+1
+#
+#
+# name='wangzhonghua'
+# for temp in name:
+#     print('---')
+i=0
+while i<=4:
+    i += 1
+    print('-'*10)
+    if i==2:
+        continue
+    print(i)
+
+print('====')
